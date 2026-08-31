@@ -1,0 +1,267 @@
+﻿/* ==========================================================================
+   RAPIDSOLVE — RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. LAPTOPS & SMALL DESKTOPS (<= 1199px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1199px) {
+  :root {
+    --container-max: 960px;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .metric-card:last-child {
+    border-right: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2. TABLETS & LARGE PHONES (<= 991px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .section {
+    padding: 5rem 0;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-subtitle {
+    margin: 0 auto 2.5rem auto;
+  }
+
+  .hero-ctas {
+    justify-content: center;
+  }
+
+  /* Navigation Drawer */
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 380px;
+    height: 100vh;
+    background: rgba(7, 9, 14, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-left: 1px solid var(--glass-border);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.7);
+    z-index: 940;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-nav-actions {
+    display: flex;
+    margin-top: 1rem;
+  }
+
+  /* Services 3D Stack on Tablet */
+  .services-stack-wrapper {
+    max-width: 580px;
+  }
+
+  .services-card-stack {
+    height: 410px;
+  }
+
+  /* Contact Section */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. MOBILE PHONES (<= 767px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .hero-section {
+    min-height: auto;
+    padding-top: calc(var(--header-height) + 3rem);
+    padding-bottom: 4rem;
+  }
+
+  .hero-title {
+    font-size: 2.35rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Services 3D Stack Mobile */
+  .services-stack-wrapper {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .services-card-stack {
+    height: 440px;
+  }
+
+  .service-stack-card {
+    padding: 1.75rem 1.5rem;
+    min-height: 360px;
+  }
+
+  .service-title {
+    font-size: 1.35rem;
+  }
+
+  .service-text {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 1.25rem;
+  }
+
+  .services-stack-nav {
+    gap: 1.25rem;
+  }
+
+  .service-nav-btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.85rem;
+  }
+
+  .service-stack-counter {
+    font-size: 1.1rem;
+    min-width: 70px;
+  }
+
+  .counter-current {
+    font-size: 1.2rem;
+  }
+
+  .card-browser-frame {
+    margin: 0.85rem;
+  }
+
+  .card-details-content {
+    padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+  }
+
+  .browser-viewport-mockup {
+    height: 220px;
+  }
+
+  .routeverse-mockup {
+    height: 260px;
+  }
+
+  .mockup-dashboard-overlay {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .metric-card:last-child {
+    border-bottom: none;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4. SMALL MOBILE DEVICES (<= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .services-card-stack {
+    height: 460px;
+  }
+
+  .service-stack-card {
+    padding: 1.5rem 1.25rem;
+    min-height: 380px;
+  }
+
+  .service-number-badge {
+    font-size: 1.4rem;
+  }
+
+  .service-icon-wrapper {
+    width: 46px;
+    height: 46px;
+  }
+
+  .contact-form-wrapper, .contact-info-card {
+    padding: 1.5rem;
+  }
+}

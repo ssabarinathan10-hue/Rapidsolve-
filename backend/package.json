@@ -1,0 +1,19 @@
+{
+  "name": "rapidsolve-contact-backend",
+  "version": "1.0.0",
+  "description": "Minimal Express backend for RAPIDSOLVE contact form enquiries",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.1.1",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.2",
+    "express-rate-limit": "^7.5.1",
+    "helmet": "^7.2.0"
+  },
+  "private": true
+}

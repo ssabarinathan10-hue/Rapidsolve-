@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RAPIDSOLVE — Digital Innovation & Software Studio specializing in rapid web engineering, AI solutions, mobile apps, and enterprise cloud.">
+  <meta name="keywords" content="RAPIDSOLVE, digital studio, software agency, AI solutions, web development, cloud platform, UI/UX design">
+  <meta name="author" content="RAPIDSOLVE Studio">
+  
+  <title>RAPIDSOLVE — Dissolving Digital Complexity</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scroll-progress"></div>
+
+  <!-- Interactive HTML5 Canvas Background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-brand">
+        <img src="assets/logo/rapdisolve-logo.svg" alt="RAPIDSOLVE Logo" width="180" height="42">
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#team" class="nav-link">Team</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation drawer">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-centered-wrapper">
+        <div class="hero-content reveal-on-scroll">
+          <div class="hero-badge">
+            <span class="badge-pulse"></span>
+            NEXT-GEN DIGITAL INNOVATION STUDIO
+          </div>
+
+          <h1 class="hero-title">
+            Dissolving Complexity. <br>
+            <span class="text-gradient">Rapidly Elevating</span> Digital Reality.
+          </h1>
+
+          <p class="hero-subtitle">
+            RAPIDSOLVE engineers ultra-scalable web applications, AI automation platforms, and intuitive enterprise products that propel modern brands forward at lightning speed.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#portfolio" class="btn btn-primary">
+              Explore Showcase
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#services" class="btn btn-secondary">
+              Our Capabilities
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Bar -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-card reveal-on-scroll">
+          <div class="metric-number" data-target="1" data-suffix="">1</div>
+          <div class="metric-label">Project Delivered</div>
+        </div>
+        <div class="metric-card reveal-on-scroll stagger-delay-1">
+          <div class="metric-number" data-target="95" data-suffix="%">95%</div>
+          <div class="metric-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section (Interactive 3D Card Stack) -->
+  <section class="section services-section" id="services">
+    <div class="services-ambient-glow"></div>
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-subtitle">OUR CAPABILITIES</div>
+        <h2 class="section-title">Engineered to <span class="text-gradient">Outperform</span></h2>
+        <p class="section-description">
+          We combine cutting-edge web architecture with artificial intelligence and high-fidelity interactive design to build platforms that scale effortlessly.
+        </p>
+      </div>
+
+      <!-- Services 3D Card Stack Container -->
+      <div class="services-stack-wrapper reveal-on-scroll">
+        <div class="services-card-stack" id="services-card-stack" tabindex="0" aria-label="Services card deck - use arrow keys or navigation buttons to browse">
+          
+          <!-- Card 01 -->
+          <div class="service-stack-card active" data-index="0" data-num="01">
+            <div class="service-card-glow"></div>
+            <div class="service-card-inner">
+              <div class="service-card-top">
+                <span class="service-number-badge">01</span>
+                <div class="service-icon-wrapper">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-title">AI Neural Automation</h3>
+              <p class="service-text">
+                Custom LLM integrations, predictive analytics engines, and graph neural network workflows designed to automate complex domain logic.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">PyTorch</span>
+                <span class="service-tag">LangChain</span>
+                <span class="service-tag">FastAPI</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="service-stack-card" data-index="1" data-num="02">
+            <div class="service-card-glow"></div>
+            <div class="service-card-inner">
+              <div class="service-card-top">
+                <span class="service-number-badge">02</span>
+                <div class="service-icon-wrapper">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-title">High-Speed Web Platforms</h3>
+              <p class="service-text">
+                Ultra-fast Jamstack and serverless web architecture delivering sub-second page loads, 60fps animations, and flawless responsive layouts.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">React / Next</span>
+                <span class="service-tag">TypeScript</span>
+                <span class="service-tag">WebGPU</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="service-stack-card" data-index="2" data-num="03">
+            <div class="service-card-glow"></div>
+            <div class="service-card-inner">
+              <div class="service-card-top">
+                <span class="service-number-badge">03</span>
+                <div class="service-icon-wrapper">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-title">Mobile & Cross-Platform</h3>
+              <p class="service-text">
+                Native-performance iOS and Android applications crafted with smooth gesture mechanics, offline sync, and instant biometric authentication.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Flutter</span>
+                <span class="service-tag">React Native</span>
+                <span class="service-tag">Swift / Kotlin</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="service-stack-card" data-index="3" data-num="04">
+            <div class="service-card-glow"></div>
+            <div class="service-card-inner">
+              <div class="service-card-top">
+                <span class="service-number-badge">04</span>
+                <div class="service-icon-wrapper">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-title">Enterprise Cloud Systems</h3>
+              <p class="service-text">
+                Resilient microservices, Kubernetes orchestration, zero-downtime deployment pipelines, and global CDN caching infrastructure.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">AWS</span>
+                <span class="service-tag">Docker</span>
+                <span class="service-tag">Kubernetes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 05 -->
+          <div class="service-stack-card" data-index="4" data-num="05">
+            <div class="service-card-glow"></div>
+            <div class="service-card-inner">
+              <div class="service-card-top">
+                <span class="service-number-badge">05</span>
+                <div class="service-icon-wrapper">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-title">Interactive 3D & Graphics</h3>
+              <p class="service-text">
+                Immersive 3D web visuals, interactive particle graphics, dynamic visualizers, and spatial canvas experiences powered by WebGL.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Three.js</span>
+                <span class="service-tag">Canvas 2D</span>
+                <span class="service-tag">GLSL Shaders</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 06 -->
+          <div class="service-stack-card" data-index="5" data-num="06">
+            <div class="service-card-glow"></div>
+            <div class="service-card-inner">
+              <div class="service-card-top">
+                <span class="service-number-badge">06</span>
+                <div class="service-icon-wrapper">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+              </div>
+              <h3 class="service-title">Cybersecurity & Audit</h3>
+              <p class="service-text">
+                Comprehensive penetration testing, real-time threat telemetry monitoring, and end-to-end cryptographic data protection protocols.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Zero-Trust</span>
+                <span class="service-tag">OAuth2</span>
+                <span class="service-tag">AES-256</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navigation Controls: [ ← Previous ] 01 / 06 [ Next → ] -->
+        <div class="services-stack-nav">
+          <button class="service-nav-btn prev-btn" id="service-prev-btn" aria-label="Previous service card">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            <span>Previous</span>
+          </button>
+          
+          <div class="service-stack-counter" aria-live="polite">
+            <span class="counter-current" id="service-counter-current">01</span>
+            <span class="counter-sep">/</span>
+            <span class="counter-total">06</span>
+          </div>
+
+          <button class="service-nav-btn next-btn" id="service-next-btn" aria-label="Next service card">
+            <span>Next</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Pagination Bar Dots -->
+        <div class="services-stack-dots" id="services-stack-dots" aria-label="Service pagination dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section (Our Work) -->
+  <section class="section portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-subtitle">REAL PROJECTS. REAL SOLUTIONS.</div>
+        <h2 class="section-title">OUR <span class="text-gradient">WORK</span></h2>
+        <p class="section-description">
+          Explore selected digital experiences built by RAPIDSOLVE.
+        </p>
+      </div>
+
+      <!-- 3D AI-Style Project Cards -->
+      <div class="work-cards-grid">
+
+        <!-- ROUTEVERSE Card -->
+        <div class="work-card work-card-3d reveal-on-scroll" id="work-card-routeverse">
+
+          <!-- Background depth glow layers (parallax) -->
+          <div class="wc-glow-layer wc-glow-1" data-depth="0.15"></div>
+          <div class="wc-glow-layer wc-glow-2" data-depth="0.25"></div>
+          <div class="wc-shimmer-line"></div>
+
+          <!-- Card scene (3D tilt target) -->
+          <div class="wc-scene">
+
+            <!-- Top Row: icon + status -->
+            <div class="work-card-top" data-depth="0.3">
+              <div class="work-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                </svg>
+              </div>
+              <span class="work-card-status">
+                <span class="status-dot"></span> Live
+              </span>
+            </div>
+
+            <!-- Main text content -->
+            <div class="wc-content" data-depth="0.2">
+              <h3 class="work-card-title">ROUTEVERSE</h3>
+              <p class="work-card-desc">RouteVerse is a real-time school bus tracking and transportation management system designed to improve the safety, visibility, and communication of school transportation.</p>
+              <p class="work-card-desc" style="margin-top: -0.5rem;">The system connects school administrators, bus drivers, and parents through a centralized platform.</p>
+
+              <div class="wc-features-label">Key Features</div>
+              <ul class="wc-features-list">
+                <li><span class="wc-feat-icon">🚌</span><span><strong>Live Bus Tracking</strong> — Track buses in real time with GPS, routes, speed, and ETA.</span></li>
+                <li><span class="wc-feat-icon">📍</span><span><strong>Route Monitoring</strong> — View bus routes and current locations on an interactive map.</span></li>
+                <li><span class="wc-feat-icon">👨‍🎓</span><span><strong>Student Management</strong> — Manage student details, bus assignments, and digital passes.</span></li>
+                <li><span class="wc-feat-icon">📱</span><span><strong>QR-Based Attendance</strong> — Record bus boarding and class attendance using QR scanning.</span></li>
+                <li><span class="wc-feat-icon">👨‍✈️</span><span><strong>Driver Management</strong> — Manage drivers, assigned buses, and driver activity.</span></li>
+                <li><span class="wc-feat-icon">🚨</span><span><strong>Delay Management</strong> — Drivers can report delays; admins can respond and notify parents.</span></li>
+                <li><span class="wc-feat-icon">🔔</span><span><strong>Notifications</strong> — Send important school and transportation updates to users.</span></li>
+                <li><span class="wc-feat-icon">💬</span><span><strong>Communication</strong> — Private chat between drivers and administrators.</span></li>
+                <li><span class="wc-feat-icon">👨‍👩‍👧</span><span><strong>Parent Portal</strong> — Parents can monitor their child's bus, attendance, notifications, and delays.</span></li>
+                <li><span class="wc-feat-icon">🛠️</span><span><strong>Admin Portal</strong> — Administrators can control and monitor the complete transportation system.</span></li>
+                <li><span class="wc-feat-icon">🔐</span><span><strong>Security</strong> — Role-based authentication and school-level data isolation.</span></li>
+              </ul>
+
+              <div class="work-card-tags" style="margin-top: 1.5rem;">
+                <span class="work-tag">Web App</span>
+                <span class="work-tag">Real-Time</span>
+                <span class="work-tag">Dashboard</span>
+              </div>
+            </div>
+
+            <!-- 3D Core orb in bottom-right corner -->
+            <div class="wc-orb-decoration" data-depth="0.45">
+              <div class="wc-orb-inner"></div>
+              <div class="wc-orb-ring"></div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-subtitle">THE MINDS BEHIND RAPIDSOLVE</div>
+        <h2 class="section-title">Leadership & <span class="text-gradient">Engineers</span></h2>
+        <p class="section-description">
+          A dedicated team of software architects and product designers committed to engineering rapid digital solutions.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Team 1: Sabarinathan -->
+        <div class="team-card reveal-on-scroll">
+          <div class="team-avatar-wrapper">
+            <img src="assets/images/team/team-1.svg" alt="Sabarinathan">
+          </div>
+          <h3 class="team-name">Sabarinathan</h3>
+          <div class="team-role">Project Flow Structure &amp; Frontend Developer</div>
+          <p class="team-bio">Specialist in architecting seamless project flow structures, high-performance web systems, and modern frontend interfaces.</p>
+        </div>
+
+        <!-- Team 2: Priyadharshini -->
+        <div class="team-card reveal-on-scroll stagger-delay-1">
+          <div class="team-avatar-wrapper">
+            <img src="assets/images/team/team-3.svg" alt="Priyadharshini">
+          </div>
+          <h3 class="team-name">Priyadharshini</h3>
+          <div class="team-role">UI/UX Design Specialist</div>
+          <p class="team-bio">Specialist in human-centric UI/UX design, dark glassmorphic aesthetics, user experience mapping, and brand visuals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal-on-scroll">
+        <div class="section-subtitle">GET IN TOUCH</div>
+        <h2 class="section-title">Let's Build Something <span class="text-gradient">Extraordinary</span></h2>
+        <p class="section-description">
+          Have a vision, high-complexity problem, or upcoming digital initiative? Reach out to our engineering team today.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-card reveal-on-scroll">
+          <div>
+            <h3 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; margin-bottom: 1.5rem;">Direct Contact</h3>
+            
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="info-title">Email Us</div>
+                <div class="info-detail"><a href="mailto:ssabarinathan600@gmail.com" style="color: inherit;">ssabarinathan600@gmail.com</a></div>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <div class="info-title">Call Us</div>
+                <div class="info-detail"><a href="tel:+917845623403" style="color: inherit;">+91 7845623403</a></div>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <div class="info-title">Location</div>
+                <div class="info-detail">Villupuram</div>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+              <div>
+                <div class="info-title">Response Guarantee</div>
+                <div class="info-detail">Within 24 Hours</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06);">
+            <span style="font-size: 0.85rem; color: var(--text-dim); display: block; margin-bottom: 0.5rem;">SECURE CHANNEL</span>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">All project inquiries are protected under mutual NDA standards.</p>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper reveal-on-scroll stagger-delay-1">
+          <form id="contact-form" novalidate>
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Full Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="alex@company.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-service">Primary Capability Needed</label>
+              <select id="contact-service" class="form-select">
+                <option value="ai">AI Neural Automation</option>
+                <option value="web">High-Speed Web Platform</option>
+                <option value="mobile">Mobile Application</option>
+                <option value="cloud">Enterprise Cloud System</option>
+                <option value="other">Other Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Project Overview</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Tell us about your project goals, timelines, and technical requirements..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              Submit Project Inquiry
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-emerald)" stroke-width="2.5">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span class="toast-text">Message sent successfully!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/logo/rapdisolve-logo.svg" alt="RAPIDSOLVE Logo" width="160">
+          <p>
+            RAPIDSOLVE is a premier technology and web studio engineering high-velocity digital products and AI automation systems.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Capabilities</h4>
+          <ul class="footer-links">
+            <li><a href="#services">AI Automation</a></li>
+            <li><a href="#services">Web Architecture</a></li>
+            <li><a href="#services">Mobile Applications</a></li>
+            <li><a href="#services">Enterprise Cloud</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#portfolio">Showcase</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="pages/404.html">404 Demo Page</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-column-title">Legal & Security</h4>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Security Telemetry</a></li>
+            <li><a href="#">NDA Protection</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom"></div>
+    </div>
+  </footer>
+
+  <!-- Back-to-Top Button -->
+  <div class="back-to-top" id="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </div>
+
+  <!-- Entry Point JavaScript Module -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

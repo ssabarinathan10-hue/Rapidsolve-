@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Dissolved | RAPIDSOLVE</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&family=Plus+Jakarta+Sans:wght@800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+
+  <style>
+    .error-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .error-code {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 9rem;
+      font-weight: 800;
+      line-height: 1;
+      background: var(--grad-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -4px;
+      margin-bottom: 0.5rem;
+      filter: drop-shadow(0 0 35px rgba(139, 92, 246, 0.4));
+    }
+
+    .error-title {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--text-main);
+    }
+
+    .error-desc {
+      color: var(--text-muted);
+      max-width: 500px;
+      font-size: 1.1rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .search-box-wrapper {
+      width: 100%;
+      max-width: 440px;
+      margin-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 1rem 1.5rem;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: var(--glass-blur);
+      border-radius: var(--radius-full);
+      color: var(--text-main);
+      font-size: 0.95rem;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Particle Background Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="error-container">
+    <a href="../index.html" style="margin-bottom: 2rem;">
+      <img src="../assets/logo/RAPIDSOLVE-logo.svg" alt="RAPIDSOLVE Logo" width="200">
+    </a>
+
+    <div class="error-code glitch-text">404</div>
+    <h1 class="error-title">Coordinate Dissolved Into Void</h1>
+    <p class="error-desc">
+      The page or resource you requested has been moved, dissolved, or never existed in this dimension.
+    </p>
+
+    <div class="search-box-wrapper">
+      <input type="text" class="search-input" placeholder="Search RAPIDSOLVE platform documentation...">
+    </div>
+
+    <a href="../index.html" class="btn btn-primary">
+      <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform: rotate(180deg);">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+      Return to Home Platform
+    </a>
+  </div>
+
+  <!-- Particle Script -->
+  <script type="module">
+    import { ParticleEngine } from '../js/particles.js';
+    document.addEventListener('DOMContentLoaded', () => {
+      new ParticleEngine('particles-canvas');
+    });
+  </script>
+</body>
+</html>
