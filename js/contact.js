@@ -3,38 +3,28 @@
  * Validates, submits to POST /api/contact, shows real success/error feedback.
  */
 
+// Default Render Backend API base URL
+const DEFAULT_API_BASE = 'https://rapdisolve-backend.onrender.com';
+
 /**
- * Resolve the Contact API endpoint adaptively:
- * - Production / Same-origin: '/api/contact'
- * - Global override: window.__RAPIDSOLVE_API_URL__
- * - Local development on separate ports: http://<host>:4000/api/contact
+ * Resolve the Contact API endpoint:
+ * - Configurable override: window.__RAPDISOLVE_API_URL__ (or legacy window.__RAPIDSOLVE_API_URL__)
+ * - Default: https://rapdisolve-backend.onrender.com/api/contact
  */
-function getContactApiUrl() {
-  if (typeof window !== 'undefined' && window.__RAPIDSOLVE_API_URL__) {
-    return window.__RAPIDSOLVE_API_URL__;
+export function getContactApiUrl() {
+  const customUrl = typeof window !== 'undefined' && (window.__RAPDISOLVE_API_URL__ || window.__RAPIDSOLVE_API_URL__);
+  const baseUrl = (typeof customUrl === 'string' && customUrl.trim())
+    ? customUrl.trim()
+    : DEFAULT_API_BASE;
+
+  const cleanBase = baseUrl.replace(/\/+$/, '');
+  if (cleanBase.endsWith('/api/contact')) {
+    return cleanBase;
   }
-
-  if (typeof window !== 'undefined' && window.location) {
-    const { hostname, port, protocol } = window.location;
-
-    // Production single-origin or standard ports
-    if (!port || port === '80' || port === '443') {
-      return '/api/contact';
-    }
-
-    // Local development separate dev server (e.g. port 3000 -> backend 4000)
-    const devBackendPort = 4000;
-    if (port !== String(devBackendPort)) {
-      return `${protocol}//${hostname}:${devBackendPort}/api/contact`;
-    }
-
-    return '/api/contact';
-  }
-
-  return '/api/contact';
+  return `${cleanBase}/api/contact`;
 }
 
-const CONTACT_API = getContactApiUrl();
+export const CONTACT_API = getContactApiUrl();
 
 export class ContactFormHandler {
   constructor() {
@@ -84,7 +74,8 @@ export class ContactFormHandler {
       };
 
       try {
-        const res  = await fetch(CONTACT_API, {
+        const endpoint = getContactApiUrl();
+        const res  = await fetch(endpoint, {
           method:  'POST',
           headers: { 'Content-Type': 'application/json' },
           body:    JSON.stringify(payload)
