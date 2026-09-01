@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    RAPIDSOLVE — CORE DESIGN SYSTEM & STYLESHEET
    ========================================================================== */
 
@@ -893,17 +893,19 @@ img, svg {
   padding: 6rem 0;
 }
 
-/* Work Cards Grid */
+/* Work Cards Showcase Container */
 .work-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 380px));
-  gap: 1.5rem;
+  display: flex;
   justify-content: center;
-  margin-top: 3rem;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1140px;
+  margin: 3rem auto 0 auto;
 }
 
 /* Individual Work Card */
 .work-card {
+  width: 100%;
   background: rgba(14, 19, 31, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
@@ -1071,7 +1073,7 @@ img, svg {
 }
 
 /* --------------------------------------------------------------------------
-   3D WORK CARD EFFECTS
+   3D WORK CARD EFFECTS & HORIZONTAL BREADTH LAYOUT
    -------------------------------------------------------------------------- */
 
 /* 3D perspective wrapper */
@@ -1090,17 +1092,53 @@ img, svg {
 /* Inner scene — receives tilt transform from JS */
 .wc-scene {
   position: relative;
-  padding: 1.75rem 2rem 2rem 2rem;
+  padding: 2.75rem 3rem 2.5rem 3rem;
   transform-style: preserve-3d;
   border-radius: inherit;
   z-index: 2;
 }
 
-/* Content groups with subtle z-offset for depth */
-.wc-content {
+/* Breadth-wise Horizontal Split Grid */
+.wc-horizontal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.28fr;
+  gap: 3.5rem;
+  align-items: start;
   position: relative;
   transform: translateZ(20px);
   transform-style: preserve-3d;
+}
+
+.wc-overview-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.wc-overview-col .work-card-title {
+  font-size: 1.65rem;
+  margin-bottom: 0.85rem;
+}
+
+.wc-overview-col .work-card-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.wc-overview-col .work-card-tags {
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.wc-features-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.wc-features-col .wc-features-label {
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .work-card-top {
@@ -1252,7 +1290,7 @@ img, svg {
 .wc-orb-decoration {
   position: absolute;
   bottom: 1.5rem;
-  left: 1.8rem;
+  right: 1.8rem;
   width: 52px;
   height: 52px;
   display: flex;

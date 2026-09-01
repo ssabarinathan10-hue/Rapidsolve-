@@ -325,46 +325,53 @@
           <!-- Card scene (3D tilt target) -->
           <div class="wc-scene">
 
-            <!-- Top Row: icon + status -->
-            <div class="work-card-top" data-depth="0.3">
-              <div class="work-card-icon">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                  <line x1="2" y1="12" x2="22" y2="12"></line>
-                </svg>
+            <div class="wc-horizontal-grid" data-depth="0.25">
+
+              <!-- Left Column: Overview & Project Info -->
+              <div class="wc-overview-col">
+                <!-- Top Row: icon + status -->
+                <div class="work-card-top">
+                  <div class="work-card-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                      <line x1="2" y1="12" x2="22" y2="12"></line>
+                    </svg>
+                  </div>
+                  <span class="work-card-status">
+                    <span class="status-dot"></span> Live
+                  </span>
+                </div>
+
+                <h3 class="work-card-title">ROUTEVERSE</h3>
+                <p class="work-card-desc">RouteVerse is a real-time school bus tracking and transportation management system designed to improve the safety, visibility, and communication of school transportation.</p>
+                <p class="work-card-desc" style="margin-top: -0.25rem;">The system connects school administrators, bus drivers, and parents through a centralized platform.</p>
+
+                <div class="work-card-tags">
+                  <span class="work-tag">Web App</span>
+                  <span class="work-tag">Real-Time</span>
+                  <span class="work-tag">Dashboard</span>
+                </div>
               </div>
-              <span class="work-card-status">
-                <span class="status-dot"></span> Live
-              </span>
-            </div>
 
-            <!-- Main text content -->
-            <div class="wc-content" data-depth="0.2">
-              <h3 class="work-card-title">ROUTEVERSE</h3>
-              <p class="work-card-desc">RouteVerse is a real-time school bus tracking and transportation management system designed to improve the safety, visibility, and communication of school transportation.</p>
-              <p class="work-card-desc" style="margin-top: -0.5rem;">The system connects school administrators, bus drivers, and parents through a centralized platform.</p>
-
-              <div class="wc-features-label">Key Features</div>
-              <ul class="wc-features-list">
-                <li><span class="wc-feat-icon">🚌</span><span><strong>Live Bus Tracking</strong> — Track buses in real time with GPS, routes, speed, and ETA.</span></li>
-                <li><span class="wc-feat-icon">📍</span><span><strong>Route Monitoring</strong> — View bus routes and current locations on an interactive map.</span></li>
-                <li><span class="wc-feat-icon">👨‍🎓</span><span><strong>Student Management</strong> — Manage student details, bus assignments, and digital passes.</span></li>
-                <li><span class="wc-feat-icon">📱</span><span><strong>QR-Based Attendance</strong> — Record bus boarding and class attendance using QR scanning.</span></li>
-                <li><span class="wc-feat-icon">👨‍✈️</span><span><strong>Driver Management</strong> — Manage drivers, assigned buses, and driver activity.</span></li>
-                <li><span class="wc-feat-icon">🚨</span><span><strong>Delay Management</strong> — Drivers can report delays; admins can respond and notify parents.</span></li>
-                <li><span class="wc-feat-icon">🔔</span><span><strong>Notifications</strong> — Send important school and transportation updates to users.</span></li>
-                <li><span class="wc-feat-icon">💬</span><span><strong>Communication</strong> — Private chat between drivers and administrators.</span></li>
-                <li><span class="wc-feat-icon">👨‍👩‍👧</span><span><strong>Parent Portal</strong> — Parents can monitor their child's bus, attendance, notifications, and delays.</span></li>
-                <li><span class="wc-feat-icon">🛠️</span><span><strong>Admin Portal</strong> — Administrators can control and monitor the complete transportation system.</span></li>
-                <li><span class="wc-feat-icon">🔐</span><span><strong>Security</strong> — Role-based authentication and school-level data isolation.</span></li>
-              </ul>
-
-              <div class="work-card-tags" style="margin-top: 1.5rem;">
-                <span class="work-tag">Web App</span>
-                <span class="work-tag">Real-Time</span>
-                <span class="work-tag">Dashboard</span>
+              <!-- Right Column: Key Features -->
+              <div class="wc-features-col">
+                <div class="wc-features-label">Key Features</div>
+                <ul class="wc-features-list">
+                  <li><span class="wc-feat-icon">🚌</span><span><strong>Live Bus Tracking</strong> — Track buses in real time with GPS, routes, speed, and ETA.</span></li>
+                  <li><span class="wc-feat-icon">📍</span><span><strong>Route Monitoring</strong> — View bus routes and current locations on an interactive map.</span></li>
+                  <li><span class="wc-feat-icon">👨‍🎓</span><span><strong>Student Management</strong> — Manage student details, bus assignments, and digital passes.</span></li>
+                  <li><span class="wc-feat-icon">📱</span><span><strong>QR-Based Attendance</strong> — Record bus boarding and class attendance using QR scanning.</span></li>
+                  <li><span class="wc-feat-icon">👨‍✈️</span><span><strong>Driver Management</strong> — Manage drivers, assigned buses, and driver activity.</span></li>
+                  <li><span class="wc-feat-icon">🚨</span><span><strong>Delay Management</strong> — Drivers can report delays; admins can respond and notify parents.</span></li>
+                  <li><span class="wc-feat-icon">🔔</span><span><strong>Notifications</strong> — Send important school and transportation updates to users.</span></li>
+                  <li><span class="wc-feat-icon">💬</span><span><strong>Communication</strong> — Private chat between drivers and administrators.</span></li>
+                  <li><span class="wc-feat-icon">👨‍👩‍👧</span><span><strong>Parent Portal</strong> — Parents can monitor their child's bus, attendance, notifications, and delays.</span></li>
+                  <li><span class="wc-feat-icon">🛠️</span><span><strong>Admin Portal</strong> — Administrators can control and monitor the complete transportation system.</span></li>
+                  <li><span class="wc-feat-icon">🔐</span><span><strong>Security</strong> — Role-based authentication and school-level data isolation.</span></li>
+                </ul>
               </div>
+
             </div>
 
             <!-- 3D Core orb in bottom-right corner -->

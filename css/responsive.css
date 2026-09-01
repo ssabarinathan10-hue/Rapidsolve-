@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    RAPIDSOLVE — RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 
@@ -97,6 +97,26 @@
 
   .services-card-stack {
     height: 410px;
+  }
+
+  /* Work Showcase Card Tablet */
+  .wc-scene {
+    padding: 2.25rem 2rem;
+  }
+
+  .wc-horizontal-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .wc-overview-col .work-card-tags {
+    padding-top: 1.25rem;
+  }
+
+  .wc-features-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem 1.25rem;
   }
 
   /* Contact Section */
@@ -202,6 +222,27 @@
   .mockup-dashboard-overlay {
     grid-template-columns: 1fr;
     gap: 0.4rem;
+  }
+
+  /* Work Showcase Card Mobile */
+  .work-cards-grid {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
+
+  .wc-scene {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .wc-horizontal-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .wc-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
   }
 
   .team-grid {
