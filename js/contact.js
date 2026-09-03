@@ -4,7 +4,7 @@
  */
 
 // Default Render Backend API base URL
-const DEFAULT_API_BASE = 'https://rapdisolve-backend.onrender.com';
+const DEFAULT_API_BASE = 'https://rapidsolve-backend.onrender.com';
 
 /**
  * Resolve the Contact API endpoint:
